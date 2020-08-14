@@ -1,9 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const mdx = require('@mdx-js/mdx');
 
 module.exports = {
   purge: {
-    mode: 'all',
     content: ['./components/**/*.js', './pages/**/*.{js,mdx}', './layouts/**/*.js', './next.config.js'],
     options: {
       whitelist: [
@@ -15,17 +13,6 @@ module.exports = {
         'text-code-blue',
         'text-gray-400',
         'italic'
-      ],
-      extractors: [
-        {
-          extensions: ['mdx'],
-          extractor: content => {
-            content = mdx.sync(content);
-            const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-            const innerMatches = content.match(/[^<>"'`\s.(){}[\]#=%]*[^<>"'`\s.(){}[\]#=%:]/g) || [];
-            return broadMatches.concat(innerMatches);
-          }
-        }
       ]
     }
   },
@@ -42,10 +29,11 @@ module.exports = {
         }
       },
       fontFamily: {
-        serif: ['Merriweather', ...defaultTheme.fontFamily.sans]
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
       }
     }
   },
   variants: {},
-  plugins: [require('@tailwindcss/typography')]
+  plugins: []
 };
