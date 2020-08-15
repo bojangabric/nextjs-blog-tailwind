@@ -17,7 +17,7 @@ const BlogPage = () => (
         <li key={page.__resourcePath}>
           <div className="md:flex justify-between items-start mb-2">
             <Link href={formatPath(page.__resourcePath)}>
-              <a className="hover:underline font-semibold text-xl md:pr-10">{page.title}</a>
+              <a className="hover:underline font-semibold text-xl md:pr-10 font-sans">{page.title}</a>
             </Link>
             <div className="text-gray-700 whitespace-no-wrap">{moment(page.published).format('MMMM Do YYYY')}</div>
           </div>
