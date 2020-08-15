@@ -2,6 +2,7 @@ const withMdxEnhanced = require('next-mdx-enhanced');
 const rehypePrism = require('@mapbox/rehype-prism');
 const visit = require('unist-util-visit');
 const smartypants = require('@silvenon/remark-smartypants');
+const remarkSlug = require('remark-slug');
 
 const tokenClassNames = {
   tag: 'text-code-red',
@@ -23,7 +24,7 @@ module.exports = withMdxEnhanced({
   layoutPath: 'layouts',
   defaultLayout: true,
   fileExtensions: ['mdx'],
-  remarkPlugins: [smartypants],
+  remarkPlugins: [remarkSlug, smartypants],
   rehypePlugins: [
     rehypePrism,
     () => {
