@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   purge: {
     content: ['./components/**/*.js', './pages/**/*.{js,mdx}', './layouts/**/*.js', './next.config.js'],
@@ -27,10 +25,6 @@ module.exports = {
           blue: '#93ddfd',
           white: '#fff'
         }
-      },
-      fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
       }
     }
   },
