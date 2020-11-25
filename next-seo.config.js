@@ -1,19 +1,20 @@
-const title = 'Freelance Web Developer – Bojan Gabric';
+const title = 'Freelance Web Developer';
 const description =
   'Bojan Gabric is a Freelance Web Developer who produces high-quality websites that provide an exceptional user experience.';
 
-const SEO = {
+const SeoConfig = {
   title,
   description,
+  titleTemplate: '%s - Bojan Gabric',
   canonical: 'https://bojangabric.com',
   openGraph: {
     type: 'website',
     url: 'https://bojangabric.com',
-    title,
+    title: `${title} - Bojan Gabric`,
     description,
     images: [
       {
-        url: 'https://bojangabric.com/images/photo.png',
+        url: 'https://bojangabric.com/images/cover-photo.png',
         alt: title
       }
     ]
@@ -21,8 +22,8 @@ const SEO = {
   twitter: {
     handle: '@bojangabric',
     site: '@bojangabric',
-    cardType: 'summary'
+    cardType: 'summary_large_image'
   }
 };
 
-export default SEO;
+export default SeoConfig;
