@@ -37,11 +37,7 @@ module.exports = withMdxEnhanced({
         });
       };
     }
-  ],
-  extendFrontMatter: {
-    process: (mdxContent, frontMatter) => {},
-    phase: 'prebuild|loader|both'
-  }
+  ]
 })({
   webpack: (config, options) => {
     config.module.rules.push({
