@@ -1,25 +1,13 @@
 .markdown {
-  @apply text-lg mt-16;
-  color: #4a5568;
-  max-width: 65ch;
-}
-
-.markdown [class~='lead'] {
-  color: #4a5568;
-  font-size: 1.25em;
-  line-height: 1.6;
-  margin-top: 1.2em;
-  margin-bottom: 1.2em;
+  @apply text-lg mt-16 text-gray-800;
 }
 
 .markdown a {
-  color: #1a202c;
-  text-decoration: underline;
+  @apply text-gray-900 underline;
 }
 
 .markdown strong {
-  color: #1a202c;
-  font-weight: 600;
+  @apply text-gray-900 font-semibold;
 }
 
 .markdown ol {
@@ -84,39 +72,27 @@
   content: close-quote;
 }
 
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  @apply text-gray-900 font-bold font-sans leading-normal mt-4 mb-2;
+}
+
 .markdown h1 {
-  color: #1a202c;
-  font-weight: 800;
-  font-size: 2.25em;
-  margin-top: 0;
-  margin-bottom: 0.8888889em;
-  line-height: 1.1111111;
+  @apply text-4xl;
 }
 
 .markdown h2 {
-  color: #1a202c;
-  font-weight: 700;
-  font-size: 1.5em;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  line-height: 1.3333333;
+  @apply text-3xl;
 }
 
 .markdown h3 {
-  color: #1a202c;
-  font-weight: 600;
-  font-size: 1.25em;
-  margin-top: 1.6em;
-  margin-bottom: 0.6em;
-  line-height: 1.6;
+  @apply text-2xl;
 }
 
 .markdown h4 {
-  color: #1a202c;
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  line-height: 1.5;
+  @apply text-xl;
 }
 
 .markdown figure figcaption {
@@ -225,8 +201,8 @@
 }
 
 .markdown img {
+  @apply mb-16;
   margin-top: 2em;
-  margin-bottom: 2em;
 }
 
 .markdown video {
