@@ -1,4 +1,4 @@
-## Nextjs project template with blog posts and tailwindcss
+## Nextjs project template with TailwindCSS and blog posts that can be written in markdown 
 
 ### 🚀 Quick start
 
